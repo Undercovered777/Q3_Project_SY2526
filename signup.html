@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Skills Test 3rd Quarter</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #ffdddd, #ddddff, #ddffdd, #ffffdd);
+            padding-top: 80px; /* space for fixed navbar */
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn-signup {
+            background: linear-gradient(to right, #ff4d4d, #4da6ff, #4dff88, #ffff66);
+            color: white;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-signup:hover {
+            opacity: 0.9;
+        }
+
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .navbar-title {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .nav-btn {
+            background: linear-gradient(to right, #ff9a9a, #9ac5ff, #9affc2);
+            color: #444;
+            border: none;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top px-4">
+        <div class="container-fluid">
+            <span class="navbar-title">Intramurals SY 2025-2026</span>
+            <div class="d-flex gap-2">
+                <a href="signup.html" class="btn nav-btn">Sign Up</a>
+                <a href="teamchecker.html" class="btn nav-btn">Team Checker</a>
+                <a href="index.html" class="btn nav-btn">Players</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4" style="width: 350px;">
+            <h3 class="text-center mb-4">Create Account</h3>
+
+            <form>
+                <div class="mb-3">
+                    <input type="text" id="username" class="form-control" placeholder="Username">
+                </div>
+
+                <div class="mb-3">
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                </div>
+
+                <div class="d-grid">
+                    <input type="button" py-click="account_creation" value="Sign up" class="btn btn-signup">
+                </div>
+            </form>
+
+            <div id="output" class="mt-3 text-center"></div>
+        </div>
+    </div>
+
+    <py-script src="main2.py"></py-script>
+
+</body>
+</html>
